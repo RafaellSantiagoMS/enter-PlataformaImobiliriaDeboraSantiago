@@ -86,33 +86,33 @@ Filtro por abas: Todos / Studios-Investimento / 2-3 Suítes-Família / Prontos p
 No `index.html`, adicionar comentários `<!-- TODO: Meta Pixel -->` e `<!-- TODO: Google Ads Tag -->` prontos para o usuário colar os IDs depois. Todos os botões de WhatsApp compartilham uma função central `buildWhatsappLink` em `src/lib/whatsapp.ts`, o que facilita futuramente disparar eventos de conversão (`fbq('track', 'Contact')` / `gtag('event', ...)`) em um único lugar quando os IDs estiverem disponíveis — deixar comentário indicando esse ponto de extensão dentro do helper.
 
 ## Implementation checklist
-- [ ] Atualizar `index.css`: novos tokens de cor (primary verde, secondary marinho, accent dourado, background off-white) em HSL, gradientes e sombras customizadas
-- [ ] Atualizar `tailwind.config.ts`: `fontFamily.display` (Playfair Display) e `fontFamily.sans` (Plus Jakarta Sans)
-- [ ] Adicionar `<link>` do Google Fonts (Playfair Display + Plus Jakarta Sans) e placeholders comentados de Meta Pixel/Google Ads no `index.html`
-- [ ] Adicionar variante `gold` em `src/components/ui/button.tsx`
-- [ ] Criar `src/lib/whatsapp.ts` com `buildWhatsappLink(phone, message)` e ponto de extensão comentado para tracking de conversão
-- [ ] Criar `src/data/properties.ts` com os 3 imóveis tipados (Bem Moema, Ária 30m², Ária 53m²)
-- [ ] Criar `Header.tsx` com nome, CRECI e CTA WhatsApp
-- [ ] Criar `Hero.tsx` com H1/subtítulo, foto da Debora, formulário rápido e botão do quiz
-- [ ] Criar `QuizModal.tsx` com fluxo de 3 perguntas e envio para WhatsApp
-- [ ] Criar `CampaignBanner.tsx` com destaque de urgência
-- [ ] Criar `PropertyFilter.tsx` + `PropertyCard.tsx` com filtragem client-side por categoria/status
-- [ ] Criar `PropertyModal.tsx` com detalhes, imagem, unidades e CTA contextual
-- [ ] Criar `WhyChooseMe.tsx` com 4 diferenciais e CRECI
-- [ ] Criar `Testimonials.tsx` com 3 depoimentos ilustrativos (avisar que são exemplos)
-- [ ] Criar `ExitIntentPopup.tsx` com detecção desktop (mouseleave) e mobile (scroll fim) + `sessionStorage` para exibir 1x
-- [ ] Criar `FloatingWhatsApp.tsx` fixo
-- [ ] Criar `Footer.tsx` institucional com aviso legal Tegra e CRECI
-- [ ] Reescrever `src/pages/Index.tsx` compondo todas as seções na ordem do briefing
-- [ ] Garantir responsividade mobile em todas as seções (grid → coluna única, textos escaláveis)
-- [ ] Remover strings de i18n do template padrão não utilizadas (`home.hero.*`) já que a página passa a ser conteúdo fixo em PT-BR
+- [passed] Atualizar `index.css`: novos tokens de cor (primary verde, secondary marinho, accent dourado, background off-white) em HSL, gradientes e sombras customizadas
+- [passed] Atualizar `tailwind.config.ts`: `fontFamily.display` (Playfair Display) e `fontFamily.sans` (Plus Jakarta Sans)
+- [passed] Adicionar `<link>` do Google Fonts (Playfair Display + Plus Jakarta Sans) e placeholders comentados de Meta Pixel/Google Ads no `index.html`
+- [passed] Adicionar variante `gold` em `src/components/ui/button.tsx`
+- [passed] Criar `src/lib/whatsapp.ts` com `buildWhatsappLink(phone, message)` e ponto de extensão comentado para tracking de conversão
+- [passed] Criar `src/data/properties.ts` com os 3 imóveis tipados (Bem Moema, Ária 30m², Ária 53m²)
+- [passed] Criar `Header.tsx` com nome, CRECI e CTA WhatsApp
+- [passed] Criar `Hero.tsx` com H1/subtítulo, foto da Debora, formulário rápido e botão do quiz
+- [passed] Criar `QuizModal.tsx` com fluxo de 3 perguntas e envio para WhatsApp
+- [passed] Criar `CampaignBanner.tsx` com destaque de urgência
+- [passed] Criar `PropertyFilter.tsx` + `PropertyCard.tsx` com filtragem client-side por categoria/status
+- [passed] Criar `PropertyModal.tsx` com detalhes, imagem, unidades e CTA contextual
+- [passed] Criar `WhyChooseMe.tsx` com 4 diferenciais e CRECI
+- [passed] Criar `Testimonials.tsx` com 3 depoimentos ilustrativos (avisar que são exemplos)
+- [passed] Criar `ExitIntentPopup.tsx` com detecção desktop (mouseleave) e mobile (scroll fim) + `sessionStorage` para exibir 1x
+- [passed] Criar `FloatingWhatsApp.tsx` fixo
+- [passed] Criar `Footer.tsx` institucional com aviso legal Tegra e CRECI
+- [passed] Reescrever `src/pages/Index.tsx` compondo todas as seções na ordem do briefing
+- [passed] Garantir responsividade mobile em todas as seções (grid → coluna única, textos escaláveis)
+- [passed] Remover strings de i18n do template padrão não utilizadas (`home.hero.*`) já que a página passa a ser conteúdo fixo em PT-BR
 
 ## Verification checklist
-- [ ] Build/lint do projeto passam sem erros
-- [ ] Todos os botões de WhatsApp abrem `https://wa.me/5511976264984?text=...` com mensagem correta e URL-encoded para cada contexto (hero, card, modal, quiz, popup, footer, flutuante)
-- [ ] Filtro de imóveis: cada aba mostra o subconjunto correto (Todos = 3, Studios/Investimento = 1, Família = 2, Prontos = 1, Na Planta = 2)
-- [ ] Modal abre com imagem/dados corretos do imóvel clicado e fecha corretamente
-- [ ] Quiz percorre as 3 etapas e gera mensagem de resumo coerente no WhatsApp
-- [ ] Popup de saída aparece apenas 1x por sessão e não interfere na navegação normal
-- [ ] Contraste de texto verificado em fundos verde/marinho/dourado/off-white (AA)
-- [ ] Layout responsivo verificado via `website_screenshot` em `http://localhost:3000` (desktop e simulando largura mobile)
+- [passed] Build/lint do projeto passam sem erros
+- [passed] Todos os botões de WhatsApp abrem `https://wa.me/5511976264984?text=...` com mensagem correta e URL-encoded para cada contexto (hero, card, modal, quiz, popup, footer, flutuante)
+- [passed] Filtro de imóveis: cada aba mostra o subconjunto correto (Todos = 3, Studios/Investimento = 1, Família = 2, Prontos = 1, Na Planta = 2)
+- [passed] Modal abre com imagem/dados corretos do imóvel clicado e fecha corretamente
+- [passed] Quiz percorre as 3 etapas e gera mensagem de resumo coerente no WhatsApp
+- [passed] Popup de saída aparece apenas 1x por sessão e não interfere na navegação normal
+- [passed] Contraste de texto verificado em fundos verde/marinho/dourado/off-white (AA)
+- [manual-required] Layout responsivo verificado via `website_screenshot` em `http://localhost:3000` (desktop e simulando largura mobile)
