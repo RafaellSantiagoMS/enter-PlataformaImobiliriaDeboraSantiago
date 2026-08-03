@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BookOpen, Send, X } from "lucide-react";
+import { BookOpen, Send } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -66,15 +66,6 @@ export const ExitIntentPopup = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="max-w-md">
-        <button
-          type="button"
-          onClick={() => setOpen(false)}
-          className="absolute right-4 top-4 rounded-md p-1 text-muted-foreground transition-colors hover:text-foreground"
-          aria-label="Fechar"
-        >
-          <X className="h-4 w-4" />
-        </button>
-
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="flex h-14 w-14 items-center justify-center rounded-full bg-accent/15">
             <BookOpen className="h-7 w-7 text-accent" />

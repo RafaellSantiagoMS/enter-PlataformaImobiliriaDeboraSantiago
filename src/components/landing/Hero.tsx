@@ -68,13 +68,13 @@ Meu objetivo: ${objetivo} em um imóvel Tegra. Quero receber opções!`;
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-8 md:items-end">
+        <div className="flex flex-col items-center gap-8">
           <div className="relative">
             <div aria-hidden className="absolute -inset-4 rounded-full bg-accent/20 blur-2xl" />
             <img
               src={DEBORA_PHOTO}
               alt="Debora Santiago, corretora Tegra Vendas"
-              className="relative h-56 w-56 rounded-full border-4 border-accent/40 object-cover shadow-elegant md:h-72 md:w-72"
+              className="relative h-56 w-56 rounded-full border-4 border-accent/40 object-cover object-top shadow-elegant md:h-72 md:w-72"
             />
           </div>
 
