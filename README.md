@@ -80,3 +80,7 @@ src/
 ## Deploy
 
 Este projeto está conectado ao [enter.pro](https://enter.pro). Alterações enviadas a este repositório são sincronizadas automaticamente com o workspace lá.
+
+## Créditos
+
+Este projeto foi desenvolvido com apoio de inteligências artificiais: a base do código foi gerada na plataforma [Enter.pro](https://enter.pro), e ajustes, limpeza e revisão foram feitos com o [Claude](https://claude.com), da Anthropic.
